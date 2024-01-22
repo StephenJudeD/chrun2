@@ -46,7 +46,7 @@ connect.string <- paste(
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 
-conn <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string, prefetch = FALSE,
+conn <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
                   bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                   sysdba = FALSE)
 
@@ -1517,7 +1517,7 @@ connect.string <- paste(
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 
-conn <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string, prefetch = FALSE,
+conn <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
                   bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                   sysdba = FALSE)
 
@@ -1536,7 +1536,7 @@ dbDisconnect(conn)
 #   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
 #   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 # 
-# conn_pce <- dbConnect(drv, username = "MM59773", password = "", dbname = connect.string, prefetch = FALSE,
+# conn_pce <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
 #                       bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
 #                       sysdba = FALSE)
 # 
@@ -4685,7 +4685,7 @@ connect.string <- paste(
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 
-conn <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string, prefetch = FALSE,
+conn <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
                   bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                   sysdba = FALSE)
 
@@ -5652,7 +5652,7 @@ setwd("S:/Retail/IRL/Supply/Marketing/MARKETING SUPPLY/Analytics & Products/Anal
 
 # STD_RATES <- read.csv('BE_STD_RATES_AUG_2022.csv', header = T, skip = 0)
 # Added the code to fetch CTA data directly from DM2.0 Analytics
-conn <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string, prefetch = FALSE,
+conn <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
                   bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                   sysdba = FALSE)
 query_res_std_rates <- dbGetQuery(conn, "select * from BE_STD_RATES");
@@ -5692,7 +5692,7 @@ std_rte_tab = as.data.frame(table(dat2$JURISDICTION, dat2$UTILITY_TYPE_CODE, dat
 
 
 # PROMO_CODES <- read.csv('PROMOCODES_DATA_AUG22.csv', header = T, skip = 0)
-conn <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string, prefetch = FALSE,
+conn <- dbConnect(drv, username = , dbname = connect.string, prefetch = FALSE,
                   bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                   sysdba = FALSE)
 query_res_promo_codes <- dbGetQuery(conn, "select * from BE_PROMO_CODES");
@@ -6732,7 +6732,7 @@ setwd("S:/Retail/IRL/Supply/Marketing/MARKETING SUPPLY/Analytics & Products/Anal
 
 # CTS <- read.csv('BE_CTS_SEP_2021.csv', header = T, skip = 1)
 # Added the code to fetch CTS data directly from DM2.0 Analytics
-conn <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string, prefetch = FALSE,
+conn <- dbConnect(drv, username = dbname = connect.string, prefetch = FALSE,
                   bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                   sysdba = FALSE)
 query_res_cts <- dbGetQuery(conn, "select * from BE_CTS");
@@ -7301,7 +7301,7 @@ setwd("S:/Retail/IRL/Supply/Marketing/MARKETING SUPPLY/Analytics & Products/Anal
 
 # CTA <- read.csv('BE_CTA_SEP_2021.csv', header = T, skip =)
 # Added the code to fetch CTA data directly from DM2.0 Analytics
-conn <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string, prefetch = FALSE,
+conn <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
                   bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                   sysdba = FALSE)
 query_res_cta <- dbGetQuery(conn, "select * from BE_CTA");
@@ -9219,7 +9219,7 @@ connect.string <- paste(
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 
-conn_pce <- dbConnect(drv, username = "SD55265", password = "Stephenwelcome#55", dbname = connect.string, prefetch = FALSE,
+conn_pce <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
                       bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                       sysdba = FALSE)
 
@@ -9249,7 +9249,7 @@ connect.string <- paste(
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 
-conn_dm2 <- dbConnect(drv, username = "Analytics", password = "December2023!", dbname = connect.string,
+conn_dm2 <- dbConnect(drv, username =  dbname = connect.string,
                       prefetch = FALSE, bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE, sysdba = FALSE)
 
 ROI_E <- dbGetQuery(conn_dm2, "SELECT table_name
@@ -9777,7 +9777,7 @@ BE_RENEWALS <- cust_pred_curr121
 #   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
 #   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 # 
-# conn_pce <- dbConnect(drv, username = "AW92211", password = "", dbname = connect.string, prefetch = FALSE,
+# conn_pce <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
 #                       bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
 #                       sysdba = FALSE)
 # 
@@ -9953,7 +9953,7 @@ connect.string <- paste(
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
 
-conn_pce <- dbConnect(drv, username = "SD55265", password = "Stephenwelcome#55", dbname = connect.string, prefetch = FALSE,
+conn_pce <- dbConnect(drv, username =  dbname = connect.string, prefetch = FALSE,
                       bulk_read = 1000L, stmt_cache = 0L, external_credentials = FALSE,
                       sysdba = FALSE)
 
